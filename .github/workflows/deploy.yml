@@ -1,27 +1,11 @@
 name: Deploy to GitHub Pages
 
 on:
-  pull_request:
-    branches: [main]
   push:
     branches: [main]
 
 jobs:
-  test-deploy:
-    if: github.event_name != 'push'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: yarn
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-      - name: Test build website
-        run: yarn build
   deploy:
-    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -36,7 +20,7 @@ jobs:
         env:
           USE_SSH: true
         run: |
-          git config --global user.email "actions@github.com"
-          git config --global user.name "gh-actions"
+          git config --global user.email "jfe.sarco@gmail.com"
+          git config --global user.name "JonathanSarco"
           yarn install --frozen-lockfile
           yarn deploy
