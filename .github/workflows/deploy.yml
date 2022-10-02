@@ -14,7 +14,7 @@ jobs:
           node-version: 18
           cache: npm
       - name: Build website
-        working-directory: js.github.io
+        working-directory: /
         run: |
           npm ci
           npm run build
