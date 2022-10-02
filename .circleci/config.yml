@@ -4,6 +4,9 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:16.17.1
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
 
     steps:
       - checkout
