@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
+  title: "JS",
   tagline: "Dinosaurs are cool",
   url: "https://github.com",
   baseUrl: "/js.github.io/",
