@@ -12,7 +12,7 @@ jobs:
       - name: Deployment to Docusaurus
         uses: redkubes/docusaurus-deploy-action@v1
         with:
-          source-folder: website
+          source-folder: docs
           git-user: ${{ secrets.USER_NAME }}
           git-password: ${{ secrets.PERSONAL_TOKEN }}
           deployment-branch: main
